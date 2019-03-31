@@ -13,6 +13,9 @@ false			return FALSE;
 "/"			return DIVIDE;
 "+"			return PLUS;
 "-"			return MINUS;
+loop			return LOOP;
+"?"			return IF;
+"->"			return GOES;
 
 [a-zA-Z][_a-zA-Z0-9]*	return IDENTIFIER;
 [0-9]+			{

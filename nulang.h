@@ -8,3 +8,6 @@
 #define MINUS 8
 #define IDENTIFIER 9
 #define INTEGER 10
+#define IF 11
+#define GOES 12
+#define LOOP 13
