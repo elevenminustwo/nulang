@@ -1,29 +1,29 @@
 # ============NULANG SYNTAX==============
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `[\t\n]` --> **NOTHING**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `[\t\n]` --> **NOTHING**
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `:` --> **COLON**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `:` --> **COLON**
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `=` --> **EQUALS**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `=` --> **EQUALS**
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `true` --> **TRUE**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `true` --> **TRUE**
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `false` --> **FALSE**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `false` --> **FALSE**
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `"*"` --> **MULTIPLY**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `"*"` --> **MULTIPLY**
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `"/"` --> **DIVIDE**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `"/"` --> **DIVIDE**
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `"+"` --> **PLUS**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `"+"` --> **PLUS**
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `"-"` --> **MINUS**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `"-"` --> **MINUS**
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `loop` --> **LOOP**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `loop` --> **LOOP**
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `"?"` --> **IF**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `"?"` --> **IF**
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `"->"` --> **GOES**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `"->"` --> **GOES**
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `[a-zA-Z][_a-zA-Z0-9]*` --> **IDENTIFIER**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `[a-zA-Z][_a-zA-Z0-9]*` --> **IDENTIFIER**
 
-- ![#6969ee](https://placehold.it/15/f03c15/000000?text=+) `[0-9]+` --> **INTEGER**
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `[0-9]+` --> **INTEGER**
