@@ -1,10 +1,18 @@
 
+int start;
+int end;
 
-
-int loop(int count,int end){//test loop method 
+int loop(int count,int value,int end){//test loop method 
 	for(count;count<=end;++count){
-	printf("Count => %d \n",count);
+		value+=count;
 	}
-	return 0;
+	return value;
+}
+
+void _loop(int start,int end){//test loop method 
+	for(start;start<=end;++start){
+	printf("%d ",start);
+	}
+	printf("\n");
 }
 

@@ -12,3 +12,4 @@
 #define IF 11
 #define GOES 12
 #define LOOP 13
+#define POT 14

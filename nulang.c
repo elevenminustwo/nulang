@@ -6,7 +6,9 @@ extern int yylex();
 extern int yylineno;
 extern int number;
 extern char* yytext;
-extern int loop(int count,int end);
+extern int loop(int count,int value,int end);
+extern void _loop(int start,int end);
+
 
 char *names[]={NULL,"equals","true","false","minus"};
 
@@ -17,9 +19,9 @@ int main(void)
 	int ntoken,vtoken,ztoken;
 	
 	ntoken=yylex();
-	while(ntoken){
+	while(ntoken){	
 	  vtoken=yylex();	
-	  switch(ntoken){
+	  switch(ntoken){	
 		case INTEGER:
 			switch(vtoken){
 				case MULTIPLY:
@@ -38,16 +40,43 @@ int main(void)
 			}	
 			break;
 		case LOOP:
+			ntoken=yylex();
 			printf("LOOP FOUND!\n");
-			loop(1,3);	
+			//_loop(1,3);	
 			if(vtoken!=INTEGER){
 			printf("Expected number after LOOP call but found %s\n",yytext);			
-			}	
 			break;
+			}	
+			switch(vtoken){
+				case INTEGER:
+					printf("Loop start value is %d ",number);
+					switch(ntoken){
+					case GOES:
+						vtoken=yylex();
+						printf("and it goes to ");
+						switch(vtoken){
+						case INTEGER:
+							printf("%d \n",number);
+							ntoken=yylex();
+							switch(ntoken){
+							case POT:
+								_loop(0,4);
+							break;
+							default:
+							printf("ntoken= %d \n",ntoken);
+					}
+						default:
+						printf("vtoken= %d \n",vtoken);
+					}
+					default:
+						printf("ntoken= %d \n",ntoken);
+					}		
+			default:
+				printf("sadsa");
+			}	
 		default:
 			printf("%s is not recognized command!\n",yytext);
 		}
-
 	ntoken = yylex();
     }
     return 0;

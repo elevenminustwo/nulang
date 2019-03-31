@@ -8,7 +8,7 @@ int number;
 [\t\n]			{
 			yytext="nothing";
 			return NOTHING;
-			};
+			}
 :			return COLON;
 =			return EQUALS;
 true			return TRUE;
@@ -20,6 +20,7 @@ false			return FALSE;
 loop			return LOOP;
 "?"			return IF;
 "->"			return GOES;
+".pot"			return POT;
 
 [a-zA-Z][_a-zA-Z0-9]*	return IDENTIFIER;
 [0-9]+			{
