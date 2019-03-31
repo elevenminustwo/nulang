@@ -5,6 +5,10 @@ int number;
 %option nounput yylineno
 
 %%
+[\t\n]			{
+			yytext="nothing";
+			return NOTHING;
+			};
 :			return COLON;
 =			return EQUALS;
 true			return TRUE;
@@ -22,7 +26,6 @@ loop			return LOOP;
 			number=atoi(yytext);
 			return INTEGER;
 			}
-[\t\n]			;
 
 %%
 

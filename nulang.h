@@ -1,3 +1,4 @@
+#define NOTHING 0
 #define COLON 1
 #define EQUALS 2
 #define TRUE 3

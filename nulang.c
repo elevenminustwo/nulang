@@ -15,30 +15,38 @@ int main(void)
 
 	int ntoken,vtoken,ztoken;
 	
-	loop(1,3);	
-
 	ntoken=yylex();
 	while(ntoken){
-		if(ntoken==INTEGER){
-		int result;
-		switch(vtoken){
-			case MULTIPLY:
-				break;
-			case DIVIDE:
-				break;
-			case PLUS:
-				break;
-			case MINUS:
-				printf("number=> %d \n",number);
-				break;
-			case EQUALS:
-				break;
+	  vtoken=yylex();	
+	  switch(ntoken){
+		case INTEGER:
+			switch(vtoken){
+				case MULTIPLY:
+					break;
+				case DIVIDE:
+					break;
+				case PLUS:
+					break;
+				case MINUS:
+					printf("number=> %d \n",number);
+					break;
+				case EQUALS:
+					break;
+			default:
+				printf("Expected '+,-,/,*,=' after %d but found %s \n",number,yytext);
+			}	
+			break;
+		case LOOP:
+			printf("LOOP FOUND!\n");
+			//loop(1,3);	
+			if(vtoken!=INTEGER){
+			printf("Expected number after LOOP call but found %s\n",yytext);			
+			}	
+			break;
 		default:
-			printf("Expected '+,-,/,*' but found something else \n");
+			printf("%s is not recognized command!\n",yytext);
 		}
-		}
-	vtoken=yylex();	
-	
+
 	ntoken = yylex();
     }
     return 0;

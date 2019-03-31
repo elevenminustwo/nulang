@@ -405,9 +405,9 @@ struct yy_trans_info
 	};
 static yyconst flex_int16_t yy_accept[32] =
     {   0,
-        0,    0,   16,   15,   14,    5,    7,    8,    6,   13,
-        1,    2,   10,   12,   12,   12,   12,   11,   13,   12,
-       12,   12,   12,   12,   12,   12,   12,    9,    3,    4,
+        0,    0,   16,   15,    1,    6,    8,    9,    7,   14,
+        2,    3,   11,   13,   13,   13,   13,   12,   14,   13,
+       13,   13,   13,   13,   13,   13,   13,   10,    4,    5,
         0
     } ;
 
@@ -491,7 +491,7 @@ static yyconst flex_int16_t yy_chk[63] =
 /* Table of booleans, true if rule could match eol. */
 static yyconst flex_int32_t yy_rule_can_match_eol[16] =
     {   0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,     };
+1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     };
 
 static yy_state_type yy_last_accepting_state;
 static char *yy_last_accepting_cpos;
@@ -797,85 +797,88 @@ do_action:	/* This label is used only to access EOF actions. */
 			goto yy_find_action;
 
 case 1:
+/* rule 1 can match eol */
 YY_RULE_SETUP
 #line 8 "nulang.l"
-return COLON;
+{
+			yytext="nothing";
+			return NOTHING;
+			};
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 9 "nulang.l"
-return EQUALS;
+#line 12 "nulang.l"
+return COLON;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 10 "nulang.l"
-return TRUE;
+#line 13 "nulang.l"
+return EQUALS;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 11 "nulang.l"
-return FALSE;
+#line 14 "nulang.l"
+return TRUE;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 12 "nulang.l"
-return MULTIPLY;
+#line 15 "nulang.l"
+return FALSE;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 13 "nulang.l"
-return DIVIDE;
+#line 16 "nulang.l"
+return MULTIPLY;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 14 "nulang.l"
-return PLUS;
+#line 17 "nulang.l"
+return DIVIDE;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 15 "nulang.l"
-return MINUS;
+#line 18 "nulang.l"
+return PLUS;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 16 "nulang.l"
-return LOOP;
+#line 19 "nulang.l"
+return MINUS;
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 17 "nulang.l"
-return IF;
+#line 20 "nulang.l"
+return LOOP;
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 18 "nulang.l"
-return GOES;
+#line 21 "nulang.l"
+return IF;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 20 "nulang.l"
-return IDENTIFIER;
+#line 22 "nulang.l"
+return GOES;
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 21 "nulang.l"
+#line 24 "nulang.l"
+return IDENTIFIER;
+	YY_BREAK
+case 14:
+YY_RULE_SETUP
+#line 25 "nulang.l"
 {
 			number=atoi(yytext);
 			return INTEGER;
 			}
 	YY_BREAK
-case 14:
-/* rule 14 can match eol */
-YY_RULE_SETUP
-#line 25 "nulang.l"
-;
-	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 27 "nulang.l"
+#line 30 "nulang.l"
 ECHO;
 	YY_BREAK
-#line 879 "lex.yy.c"
+#line 882 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1847,7 +1850,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 27 "nulang.l"
+#line 30 "nulang.l"
 
 
 
