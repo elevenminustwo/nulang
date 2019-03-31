@@ -3,6 +3,7 @@
 
 extern int yylex();
 extern int yylineno;
+extern int number;
 extern char* yytext;
 
 char *names[]={NULL,"equals","true","false","minus"};
@@ -10,35 +11,27 @@ char *names[]={NULL,"equals","true","false","minus"};
 int main(void)
 {
 
-	int ntoken,vtoken;
+	int ntoken,vtoken,ztoken;
 
 	ntoken=yylex();
 	while(ntoken){
-		printf("ntoken = %d\nvtoken = %d\n",ntoken,vtoken);
-		printf("yylex = %d\n",yylex());
-		if(yylex() != IDENTIFIER){
-			printf("Syntax error in line %d, Expected a '=' but found %s\n",yylineno,yytext);
-	}
-	vtoken = yylex();
-	switch (ntoken) {
-	case TRUE:
-	case FALSE:
-	case EQUALS:
-		if(vtoken != EQUALS) {
-			printf("Syntax error in line %d, Expected an identifier but found %s\n",yylineno,yytext);
-			return 1;
+		if(ntoken!=INTEGER){
+			printf("Expected integer but found %s at line %d\n",yytext,yylineno);		
+		return 1;
 		}
-		printf("%s is set to %s\n",names[ntoken],yytext);
+	vtoken=yylex();	
+	switch(vtoken){
+	case MULTIPLY:
+		break;
+	case DIVIDE:
+		break;
+	case PLUS:
 		break;
 	case MINUS:
-		if(vtoken != INTEGER) {
-			printf("Syntax error in line %d, Expected an integer but found %s\n",yylineno,yytext);
-			return 1;
-		}
-		printf("%s is set to %s\n",names[ntoken],yytext);
+		printf("number=> %d \n",number);
 		break;
 	default:
-		printf("Syntax error in line %d\n",yylineno);
+		printf("Expected '+,-,/,*' but found something else \n");
 	}
 	ntoken = yylex();
     }

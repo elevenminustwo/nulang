@@ -2,6 +2,9 @@
 #define EQUALS 2
 #define TRUE 3
 #define FALSE 4
-#define MINUS 5
-#define IDENTIFIER 6
-#define INTEGER 7
+#define MULTIPLY 5
+#define DIVIDE 6
+#define PLUS 7
+#define MINUS 8
+#define IDENTIFIER 9
+#define INTEGER 10

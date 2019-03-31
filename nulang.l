@@ -1,5 +1,6 @@
 %{
 #include "nulang.h"
+int number;
 %}
 %option nounput yylineno
 
@@ -8,10 +9,16 @@
 =			return EQUALS;
 true			return TRUE;
 false			return FALSE;
--			return MINUS;
+"*"			return MULTIPLY;
+"/"			return DIVIDE;
+"+"			return PLUS;
+"-"			return MINUS;
 
 [a-zA-Z][_a-zA-Z0-9]*	return IDENTIFIER;
-[1-9][0-9]*		return INTEGER;
+[0-9]+			{
+			number=atoi(yytext);
+			return INTEGER;
+			}
 [\t\n]			;
 
 %%
