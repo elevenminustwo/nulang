@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include "nulang.h"
+#include "loop.h"
 
 extern int yylex();
 extern int yylineno;
 extern int number;
 extern char* yytext;
+extern int loop(int count,int end);
 
 char *names[]={NULL,"equals","true","false","minus"};
 
-int loop(int count,int end);
 
 int main(void)
 {
@@ -38,7 +39,7 @@ int main(void)
 			break;
 		case LOOP:
 			printf("LOOP FOUND!\n");
-			//loop(1,3);	
+			loop(1,3);	
 			if(vtoken!=INTEGER){
 			printf("Expected number after LOOP call but found %s\n",yytext);			
 			}	
@@ -50,12 +51,5 @@ int main(void)
 	ntoken = yylex();
     }
     return 0;
-}
-
-int loop(int count,int end){//test loop method 
-	for(count;count<=end;++count){
-	printf("Count => %d \n",count);
-	}
-	return 0;
 }
 
