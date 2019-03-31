@@ -1,31 +1,29 @@
 # ============NULANG SYNTAX==============
 
-[\t\n]			NOTHING;
-			
-:			COLON;
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `[\t\n] --> NOTHING`
 
-=			EQUALS;
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `: --> COLON`
 
-true			TRUE;
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `= --> EQUALS`
 
-false			FALSE;
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `true --> TRUE`
 
-"*"			MULTIPLY;
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `false --> FALSE`
 
-"/"			DIVIDE;
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `"*" --> MULTIPLY`
 
-"+"			PLUS;
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `"/" --> DIVIDE`
 
-"-"			MINUS;
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `"+" --> PLUS`
 
-loop			LOOP;
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `"-" --> MINUS`
 
-"?"			IF;
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `loop --> LOOP`
 
-"->"			GOES;
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `"?" --> IF`
 
-[a-zA-Z][_a-zA-Z0-9]*	IDENTIFIER;
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `"->" --> GOES`
 
-[0-9]+			INTEGER;
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `[a-zA-Z][_a-zA-Z0-9]* --> IDENTIFIER`
 
-%%
+- ![#1589F0](https://placehold.it/15/f03c15/000000?text=+) `[0-9]+ --> INTEGER`
