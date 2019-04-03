@@ -5,10 +5,11 @@ int number;
 %option nounput yylineno
 
 %%
-[\t\n]			{
+[\t]			{
 			yytext="nothing";
 			return NOTHING;
 			}
+[\n]			;
 :			return COLON;
 =			return EQUALS;
 true			return TRUE;
@@ -19,7 +20,8 @@ false			return FALSE;
 "-"			return MINUS;
 loop			return LOOP;
 "?"			return IF;
-"->"			return GOES;
+"->"			return GOESS;
+".sum"			return SUM;
 ".pot"			return POT;
 ".g"			return GET;
 ".s"			return SET;

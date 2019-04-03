@@ -10,8 +10,9 @@
 #define IDENTIFIER 9
 #define INTEGER 10
 #define IF 11
-#define GOES 12
-#define LOOP 13
-#define POT 14
-#define GET 15
-#define SET 16
+#define GOESS 12
+#define SUM 13
+#define LOOP 14
+#define POT 15
+#define GET 16
+#define SET 17

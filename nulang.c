@@ -37,6 +37,7 @@ int main(void)
 	  vtoken=yylex();	
 	  switch(ntoken){	
 		case INTEGER:
+			ntoken=yylex();
 			switch(vtoken){
 				case MULTIPLY:
 					break;
@@ -50,7 +51,7 @@ int main(void)
 				case EQUALS:
 					break;
 			default:
-				printf("Expected '+,-,/,*,=' after %d but found %s \n",number,yytext);
+				printf("Expected '+,-,/,*,=' after %d but found %s\n",number,yytext);
 			}	
 			break;
 		case LOOP:
@@ -65,7 +66,7 @@ int main(void)
 				case INTEGER:
 				printf("Loop start value is %d ",number);			setStart(number);					
 					switch(ntoken){
-					case GOES:
+					case GOESS:
 						vtoken=yylex();
 						printf("and it goes to ");
 						switch(vtoken){
@@ -78,6 +79,8 @@ int main(void)
 								_loop();
 							break;
 							case GET:
+							break;
+							case SUM:
 							printf("loop sum=%d \n",loop());
 							break;
 							default:
@@ -90,10 +93,10 @@ int main(void)
 						printf("ntoken= %d \n",ntoken);
 					}		
 			default:
-				printf("sadsa");
+				printf("\n");
 			}	
 		default:
-			printf("%s is not recognized command!\n",yytext);
+			printf("\n");
 		}
 	ntoken = yylex();
     }
