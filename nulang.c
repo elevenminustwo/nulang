@@ -7,7 +7,9 @@ extern int yylineno;
 extern int number;
 extern char* yytext;
 extern int loop(int count,int value,int end);
-extern void _loop(int start,int end);
+extern void _loop();
+extern void setStart(int _start);
+extern void setEnd(int _end);
 
 
 char *names[]={NULL,"equals","true","false","minus"};
@@ -31,7 +33,7 @@ int main(void)
 				case PLUS:
 					break;
 				case MINUS:
-					printf("number=> %d \n",number);
+					printf("Minus detected number=> %d \n",number);
 					break;
 				case EQUALS:
 					break;
@@ -49,7 +51,7 @@ int main(void)
 			}	
 			switch(vtoken){
 				case INTEGER:
-					printf("Loop start value is %d ",number);
+				printf("Loop start value is %d ",number);			setStart(number);					
 					switch(ntoken){
 					case GOES:
 						vtoken=yylex();
@@ -57,10 +59,11 @@ int main(void)
 						switch(vtoken){
 						case INTEGER:
 							printf("%d \n",number);
+							setEnd(number);
 							ntoken=yylex();
 							switch(ntoken){
 							case POT:
-								_loop(0,4);
+								_loop();
 							break;
 							default:
 							printf("ntoken= %d \n",ntoken);
