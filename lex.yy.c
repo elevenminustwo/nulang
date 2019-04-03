@@ -394,8 +394,8 @@ static void yy_fatal_error (yyconst char msg[]  );
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
 
-#define YY_NUM_RULES 18
-#define YY_END_OF_BUFFER 19
+#define YY_NUM_RULES 19
+#define YY_END_OF_BUFFER 20
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -405,10 +405,10 @@ struct yy_trans_info
 	};
 static yyconst flex_int16_t yy_accept[38] =
     {   0,
-        0,    0,   19,   18,    1,    6,    8,    9,   18,    7,
-       17,    2,    3,   11,   16,   16,   16,   16,   12,   14,
-        0,   15,   17,   16,   16,   16,   16,    0,   16,   16,
-       16,   13,   16,   10,    4,    5,    0
+        0,    0,   20,   19,    1,    6,    8,    9,   19,    7,
+       18,    2,    3,   11,   17,   17,   17,   17,   12,   14,
+        0,   15,   18,   17,   17,   17,   17,    0,   17,   17,
+       17,   13,   17,   10,    4,    5,    0
     } ;
 
 static yyconst YY_CHAR yy_ec[256] =
@@ -491,9 +491,10 @@ static yyconst flex_int16_t yy_chk[72] =
     } ;
 
 /* Table of booleans, true if rule could match eol. */
-static yyconst flex_int32_t yy_rule_can_match_eol[19] =
+static yyconst flex_int32_t yy_rule_can_match_eol[20] =
     {   0,
-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     };
+1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        };
 
 static yy_state_type yy_last_accepting_state;
 static char *yy_last_accepting_cpos;
@@ -513,7 +514,7 @@ char *yytext;
 #line 2 "nulang.l"
 #include "nulang.h"
 int number;
-#line 517 "lex.yy.c"
+#line 518 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -731,7 +732,7 @@ YY_DECL
 	{
 #line 7 "nulang.l"
 
-#line 735 "lex.yy.c"
+#line 736 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -879,23 +880,28 @@ return SET;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 27 "nulang.l"
-return IDENTIFIER;
+#line 26 "nulang.l"
+return IF;
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
 #line 28 "nulang.l"
+return IDENTIFIER;
+	YY_BREAK
+case 18:
+YY_RULE_SETUP
+#line 29 "nulang.l"
 {
 			number=atoi(yytext);
 			return INTEGER;
 			}
 	YY_BREAK
-case 18:
+case 19:
 YY_RULE_SETUP
-#line 33 "nulang.l"
+#line 34 "nulang.l"
 ECHO;
 	YY_BREAK
-#line 899 "lex.yy.c"
+#line 905 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1867,7 +1873,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 33 "nulang.l"
+#line 34 "nulang.l"
 
 
 

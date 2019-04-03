@@ -1,17 +1,26 @@
 #include <stdio.h>
 #include "nulang.h"
 #include "loop.h"
+#include "comparison.h"
 
+//lex
 extern int yylex();
 extern int yylineno;
 extern int number;
 extern char* yytext;
+
+//loop.h
 extern int loop();
 extern void _loop();
 extern void setStart(int _start);
 extern void setEnd(int _end);
 extern int getStart();
 extern int getEnd();
+
+//comparison.h
+extern bool equals(int num1,int num2);
+extern bool less(int num1,int num2);
+extern bool greater(int num1,int num2);
 
 
 char *names[]={NULL,"equals","true","false","minus"};
