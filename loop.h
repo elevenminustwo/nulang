@@ -9,6 +9,13 @@ void setEnd(int _end){
 	end=_end;
 }
 
+int getStart(){
+	return start;
+}
+int getEnd(){
+	return end;
+}
+
 int loop(int count,int value,int end){//test loop method 
 	for(count;count<=end;++count){
 		value+=count;
