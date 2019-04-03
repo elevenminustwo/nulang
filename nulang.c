@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 #include "nulang.h"
 #include "loop.h"
 #include "comparison.h"
