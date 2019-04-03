@@ -6,10 +6,12 @@ extern int yylex();
 extern int yylineno;
 extern int number;
 extern char* yytext;
-extern int loop(int count,int value,int end);
+extern int loop();
 extern void _loop();
 extern void setStart(int _start);
 extern void setEnd(int _end);
+extern int getStart();
+extern int getEnd();
 
 
 char *names[]={NULL,"equals","true","false","minus"};
@@ -64,6 +66,9 @@ int main(void)
 							switch(ntoken){
 							case POT:
 								_loop();
+							break;
+							case GET:
+							printf("loop sum=%d \n",loop());
 							break;
 							default:
 							printf("ntoken= %d \n",ntoken);

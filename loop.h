@@ -1,6 +1,7 @@
 
 int start;
 int end;
+int value;
 
 void setStart(int _start){
 	start=_start;
@@ -16,14 +17,14 @@ int getEnd(){
 	return end;
 }
 
-int loop(int count,int value,int end){//test loop method 
-	for(count;count<=end;++count){
-		value+=count;
+int loop(){
+	for(start;start<=end;++start){
+		value+=start;
 	}
 	return value;
 }
 
-void _loop(){//test loop method 
+void _loop(){
 	for(start;start<=end;++start){
 	printf("%d ",start);
 	}

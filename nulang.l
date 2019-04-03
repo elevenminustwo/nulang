@@ -21,6 +21,8 @@ loop			return LOOP;
 "?"			return IF;
 "->"			return GOES;
 ".pot"			return POT;
+".g"			return GET;
+".s"			return SET;
 
 [a-zA-Z][_a-zA-Z0-9]*	return IDENTIFIER;
 [0-9]+			{

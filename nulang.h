@@ -13,3 +13,5 @@
 #define GOES 12
 #define LOOP 13
 #define POT 14
+#define GET 15
+#define SET 16
