@@ -1,6 +1,6 @@
 # ============NULANG SYNTAX==============
 
-- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `[\t\n]` --> **NOTHING**
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `[\t]` --> **NOTHING**
 
 - ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `:` --> **COLON**
 
