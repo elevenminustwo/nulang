@@ -24,12 +24,20 @@
 
 - ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `"->"` --> **GOES**
 
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `".sum"` --> **SUM**
+
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `".pot"` --> **POT**
+
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `".g"` --> **GET**
+
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `".s"` --> **SET**
+
 - ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `[a-zA-Z][_a-zA-Z0-9]*` --> **IDENTIFIER**
 
 - ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `[0-9]+` --> **INTEGER**
 
 # ===============BNF======================
-Logic language of loop.
+Logic language of loop statement which allows only one direction.
 
 \<program\> ::= \<loop\>
 
