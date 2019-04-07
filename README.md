@@ -33,7 +33,7 @@ Logic language of loop.
 
 \<program\> ::= \<loop\>
 
-\<loop\> ::= \<loop\> \<integer\> \<rotation\> \<integer\> \
+\<loop> ::= <loop> <integer> <rotation> <integer> \
           | \<loop\> \<integer\> \<rotation\> \<integer\> ["\<exp>\"]
 
 \<rotation\> ::= "->"; 
