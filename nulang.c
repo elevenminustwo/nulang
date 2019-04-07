@@ -34,6 +34,7 @@ int main(void)
 	
 	ntoken=yylex();
 	while(ntoken){	
+	  printf("\n");
 	  vtoken=yylex();	
 	  switch(ntoken){	
 		case INTEGER:
@@ -81,16 +82,18 @@ int main(void)
 							case GET:
 							break;
 							case SUM:
-							printf("loop sum=%d \n",loop());
+							printf("loop sum is %d \n",loop());
 							break;
 							default:
 							printf("ntoken= %d \n",ntoken);
 					}
 						default:
-						printf("vtoken= %d \n",vtoken);
+						printf(" ");
+						//printf("vtoken= %d \n",vtoken);
 					}
 					default:
-						printf("ntoken= %d \n",ntoken);
+						printf(" ");
+						//printf("ntoken= %d \n",ntoken);
 					}		
 			default:
 				printf("\n");

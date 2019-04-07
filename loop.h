@@ -25,6 +25,7 @@ int loop(){
 }
 
 void _loop(){
+	printf("Printing out the loop => ");
 	for(start;start<=end;++start){
 	printf("%d ",start);
 	}
