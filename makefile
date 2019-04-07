@@ -1,4 +1,4 @@
-nulang : nulang.c nulang.h nulang.l
+nulang : nulang.c nulang.h nulang.l loop.h comparison.h temp.h
 	lex nulang.l
 	gcc -g lex.yy.c nulang.c -o nulang.nu
 
