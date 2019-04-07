@@ -34,14 +34,14 @@ Logic language of loop.
 \<program\> ::= \<loop\>
 
 \<loop> ::= \<loop\> \<integer\> \<rotation\> \<integer\> \
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | \<loop\> \<integer\> \<rotation\> \<integer\> ["\<exp>\"]
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | \<loop\> \<integer\> \<rotation\> \<integer\> ["\<exp>\"]
 
 \<rotation\> ::= "->"; 
 
 \<exp\> ::= \<term\> \
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | \<term\>;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | \<term\>;
 
 \<term\> ::= ".pot" \
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | ".sum";
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | ".sum";
           
 \<integer\> ::= \[0-9]+\
