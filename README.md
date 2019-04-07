@@ -38,10 +38,10 @@ Logic language of loop.
 
 \<rotation\> ::= "->"; 
 
-\<exp\> ::= \<term\>
-          | \<term\>;
+\<exp\> ::= \<term\> \
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | \<term\>;
 
-\<term\> ::= ".pot"
-          | ".sum";
+\<term\> ::= ".pot" \
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | ".sum";
           
 \<integer\> ::= \[0-9]+\
