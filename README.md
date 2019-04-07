@@ -27,3 +27,12 @@
 - ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `[a-zA-Z][_a-zA-Z0-9]*` --> **IDENTIFIER**
 
 - ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `[0-9]+` --> **INTEGER**
+
+# ===============BNF======================
+Logic language of loop.
+
+\<program\> ::= \<loop\>
+
+\<loop\> ::= \<loop\> + \<integer\> + \<exp\> + \<integer\>;
+          | \<loop\> + \<integer\> + \<exp\> + \<integer\> + \[".pot" | ".sum"\];
+
