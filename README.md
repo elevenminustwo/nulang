@@ -33,7 +33,11 @@ Logic language of loop.
 
 \<program\> ::= \<loop\>
 
-\<loop\> ::= \<loop\> + \<integer\> + \<exp\> + \<integer\>
+\<loop\> ::= \<loop\> \<integer\> \<exp\> \<integer\>
+          | \<loop\> \<integer\> \<exp\> \<integer\> \["<exp>"\]
+\<exp\> ::= 
 
-          | \<loop\> + \<integer\> + \<exp\> + \<integer\> + \[".pot" | ".sum"\];
-
+\<exp\> ::= \<term\>
+          | \<term\> ;
+          
+\<integer\> ::= \[0-9]+\
