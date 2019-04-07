@@ -33,10 +33,15 @@ Logic language of loop.
 
 \<program\> ::= \<loop\>
 
-\<loop\> ::= \<loop\> \<integer\> \<exp\> \<integer\>
-          | \<loop\> \<integer\> \<exp\> \<integer\> ["\<exp>\"]
-          
+\<loop\> ::= \<loop\> \<integer\> \<rotation\> \<integer\>
+          | \<loop\> \<integer\> \<rotation\> \<integer\> ["\<exp>\"]
+
+\<rotation\> ::= "->"; 
+
 \<exp\> ::= \<term\>
-          | \<term\> ;
+          | \<term\>;
+
+\<term\> ::= ".pot"
+          | ".sum";
           
 \<integer\> ::= \[0-9]+\
