@@ -34,9 +34,8 @@ Logic language of loop.
 \<program\> ::= \<loop\>
 
 \<loop\> ::= \<loop\> \<integer\> \<exp\> \<integer\>
-          | \<loop\> \<integer\> \<exp\> \<integer\> \["<exp>"\]
-\<exp\> ::= 
-
+          | \<loop\> \<integer\> \<exp\> \<integer\> ["<exp>"]
+          
 \<exp\> ::= \<term\>
           | \<term\> ;
           
