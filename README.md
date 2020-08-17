@@ -1,5 +1,3 @@
-# ============NULANG SYNTAX==============
-
 - ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `[\t]` --> **NOTHING**
 
 - ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `:` --> **COLON**
@@ -36,7 +34,6 @@
 
 - ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `[0-9]+` --> **INTEGER**
 
-# ===============BNF======================
 Logic language of loop statement which allows only one direction.
 
 \<program\> ::= \<loop\>
